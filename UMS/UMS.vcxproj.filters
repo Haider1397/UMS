@@ -15,31 +15,56 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\UMS\Student\Student.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\UMS\Core\Person.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\UMS\Student\Student.cpp">
+    <ClCompile Include="src\UMS\Core\Base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UMS\Teacher\Teacher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UMS\Core\Menus.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\UMS\Core\Person.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\UMS\Stundent\Student.h">
+    <ClInclude Include="include\UMS\Student\Student.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\UMS\Core\Core.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\UMS\Core\Header.h">
+    <ClInclude Include="src\UMS\Student\StudentManagement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\UMS\Core\Common.h">
+    <ClInclude Include="include\UMS\Management\Management.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\UMS\Student\Student.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UMS\Core\Person.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UMS\Core\Base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UMS\Teacher\Teacher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UMS\Core\Menus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\UMS\StudentData.txt" />
+    <Text Include="data\UMS\TeacherData.txt" />
   </ItemGroup>
 </Project>

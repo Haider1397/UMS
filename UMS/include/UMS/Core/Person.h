@@ -5,16 +5,19 @@ namespace UMS
 	class Person
 	{
 	public:
-		Person(PersonDesc& desc);
-		virtual ~Person();
+		Person();
+		~Person();
 
-	protected:
-		virtual void inputData();
+		virtual void inputData(std::string id);
 		virtual void displayData();
-
-		char m_id[10]{};
-	private:
-
-		char m_name[50]{};
+		virtual void saveDataToFile(std::ofstream& file);
+		virtual void loadDataFromFile(std::ifstream& file);
+		virtual void deleteData();
+	protected:
+		std::string m_name{};
+		std::string m_id{};
+		int m_age{};
+		std::string m_email{};
+		std::string m_phoneNo{};
 	};
 }

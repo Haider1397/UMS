@@ -1,6 +1,5 @@
 #pragma once
+#define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
-#include<UMS/Core/Common.h>
-
-class Person;
-class Student;
+#include<string>
+#include<fstream>

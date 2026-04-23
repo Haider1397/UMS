@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -20,15 +20,26 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\UMS\Core\Menus.cpp" />
+    <ClCompile Include="src\UMS\Core\Base.cpp" />
     <ClCompile Include="src\UMS\Core\Person.cpp" />
     <ClCompile Include="src\UMS\Student\Student.cpp" />
+    <ClCompile Include="src\UMS\Teacher\Teacher.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\UMS\Core\Common.h" />
+    <ClInclude Include="include\UMS\Core\Base.h" />
     <ClInclude Include="include\UMS\Core\Core.h" />
-    <ClInclude Include="include\UMS\Core\Header.h" />
+    <ClInclude Include="include\UMS\Student\Student.h" />
     <ClInclude Include="include\UMS\Core\Person.h" />
-    <ClInclude Include="include\UMS\Stundent\Student.h" />
+    <ClInclude Include="include\UMS\Core\Menus.h" />
+    <ClInclude Include="src\UMS\Student\Student.h" />
+    <ClInclude Include="src\UMS\Student\StudentManagement.h" />
+    <ClInclude Include="include\UMS\Management\Management.h" />
+    <ClInclude Include="src\UMS\Teacher\Teacher.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\UMS\StudentData.txt" />
+    <Text Include="data\UMS\TeacherData.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -103,7 +114,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include/;$(ProjectDir)source/;$(ProjectDir)data/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include/;$(ProjectDir)src/;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -119,7 +130,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include/;$(ProjectDir)source/;$(ProjectDir)data/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include/;$(ProjectDir)src/;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
