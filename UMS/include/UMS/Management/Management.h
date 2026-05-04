@@ -24,6 +24,7 @@ namespace UMS
 		std::string m_filePath{};
 		std::string m_idPrefix{};
 		int m_idCounter{};
+		int m_enteries{};
 		T* m_data_array;
 
 	};
@@ -54,17 +55,32 @@ void UMS::Management<T>::addData()
 template<typename T>
 void UMS::Management<T>::deleteData(std::string id)
 {
+	if (decomposeId(id) < 0 || decomposeId(id) >= m_enteries)
+	{
+		std::cout << "\n Invalid ID \n";
+		return;
+	}
 	m_data_array[decomposeId(id)].deleteData();
 }
 
 template<typename T>
 void UMS::Management<T>::updateData(std::string id)
 {
+	if (decomposeId(id) < 0 || decomposeId(id) >= m_enteries)
+	{
+		std::cout << "\n Invalid ID \n";
+		return;
+	}
 	m_data_array[decomposeId(id)].inputData(id);
 }
 template<typename T>
 void UMS::Management<T>::displayData(std::string id)
 {
+	if (decomposeId(id) < 0 || decomposeId(id) >= m_enteries)
+	{
+		std::cout << "\n Invalid ID \n";
+		return;
+	}
 	m_data_array[decomposeId(id)].displayData();
 }
 
@@ -77,12 +93,12 @@ void UMS::Management<T>::loadDataFromFile()
 
 	if (!file) return;
 
-	int Enteries = Management::noOfEnteries(file);
+	int m_enteries = Management::noOfEnteries(file);
 
 	file.clear();
 	file.seekg(0, std::ios::beg);
 
-	for (int i{}; i < Enteries; i++)
+	for (int i{}; i < m_enteries; i++)
 	{
 		m_data_array[i].loadDataFromFile(file);
 		m_idCounter++;

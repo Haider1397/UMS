@@ -11,12 +11,15 @@ namespace UMS
 		~Base();
 
 	private:
-		std::string STUDENT_FILE_PATH{ "C:\\Users\\muham\\Documents\\Haider\\Projects\\UMS\\UMS\\data\\UMS\\StudentData.txt" };
-		std::string TEACHER_FILE_PATH{ "C:\\Users\\muham\\Documents\\Haider\\Projects\\UMS\\UMS\\data\\UMS\\TeacherData.txt" };
+		std::string STUDENT_FILE_PATH
+		{ "C:\\Users\\Public\\Documents\\UMS\\UMS\\data\\UMS\\StudentData.txt" };
+		std::string TEACHER_FILE_PATH
+		{ "C:\\Users\\Public\\Documents\\UMS\\UMS\\data\\UMS\\TeacherData.txt" };
 
 	public:
 		Management<Student>* m_studentManagement;
 		Management<Teacher>* m_teacherManagement;
 
 	};
+
 }
